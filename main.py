@@ -1,24 +1,22 @@
+import string
+alphabet = string.ascii_lowercase
+
 def cryptagecesar(cle, txt):
     txtcrypte = []
 
     for i in range(len(txt)):
 
-        a = txt[i]
-        a = ord(a)
+        a = alphabet.find(txt[i])
 
-        if a > 96:
+        if a >= 0:
 
-            a = a - 97
             b = ((a - cle) % 26)
-            b = b + 97
-            c = chr(b)
+            c = alphabet[b]
             txtcrypte.append(c)
 
         else:
 
-            b = (a - cle)
-            c = chr(b)
-            txtcrypte.append(c)
+            txtcrypte.append(txt[i])
 
     return ''.join(txtcrypte)
 
@@ -34,22 +32,17 @@ def decryptagecesar(cle, txt):
 
     for i in range(len(txt)):
 
-        a = txt[i]
-        a = ord(a)
+        a = alphabet.find(txt[i])
 
-        if a > 96:
+        if a >= 0:
 
-            a = a - 97
             b = ((a + cle) % 26)
-            b = b + 97
-            c = chr(b)
+            c = alphabet[b]
             txtdecrypte.append(c)
 
         else:
 
-            b = (a + cle)
-            c = chr(b)
-            txtdecrypte.append(c)
+            txtdecrypte.append(txt[i])
 
     return ''.join(txtdecrypte)
 
