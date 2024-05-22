@@ -1,1 +1,2 @@
 input('hello')
+input('salut)')
