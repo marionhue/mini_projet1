@@ -51,3 +51,15 @@ txt = tuple(input("Quel mot souhaitez-vous décrypter ?"))
 cle = int(input("Quel est la clé de cryptage ?"))
 
 print(decryptagecesar(cle, txt))
+
+def analyse_freq(txt):
+    for i in range(length(txt)+1):
+        occurrence[alphabet.find(txt[1])] += 1
+
+    max = occurrence[0]
+    for i in range(length(occurrence)+1):
+        if max < occurrence[i]:
+            max = occurrence[i]
+            cle = i
+
+    return cle
