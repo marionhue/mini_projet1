@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr  7 18:31:10 2021
-
-@author: thomas
-"""
-
-
 def cryptagecesar(cle, txt):
     txtcrypte = []
 
